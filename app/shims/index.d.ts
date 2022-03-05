@@ -4,17 +4,6 @@ declare global {
   }
 }
 
-interface Post {
-  title: string;
-  slug?: string;
-  excerpt?: string;
-  content: string;
-  publishedAt: string;
-  featuredImage?: string;
-  seoDescription?: string;
-  seoMetaImage?: string;
-}
-
 interface Page {
   title: string;
   subtitle?: string;

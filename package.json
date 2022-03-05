@@ -1,8 +1,8 @@
 {
-  "name": "nuxt-netlifycms",
+  "name": "bvhwoodcreations",
   "version": "0.0.1",
-  "description": "Yo",
-  "author": "Gomah",
+  "description": "Marketing site for BVH Wood Creations",
+  "author": "Flare Software LC",
   "private": true,
   "scripts": {
     "dev": "nuxt-ts -o",

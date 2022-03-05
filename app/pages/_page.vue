@@ -5,6 +5,14 @@
     </h1>
 
     <div v-html="$md.render(page.content)" class="page__content markdown pt-4 md:pt-6 md:pb-24" />
+
+    <div class="flex flex-col w-full xl:w-2/5">
+      <img
+        :alt="page.title + ' Product image'"
+        class="rounded shadow-xl"
+        :src="page.featuredImage"
+      />
+    </div>
   </section>
 </template>
 
