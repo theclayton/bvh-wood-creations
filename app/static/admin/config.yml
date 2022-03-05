@@ -41,34 +41,34 @@ collections:
           - { label: Lang, name: lang, widget: string, default: en }
 
   - name: 'shop'
-  label: Shop Page
-  format: json
-  file: 'app/content/shop.json'
-  fields:
-    - { label: Title, name: title, widget: string }
-    - { label: Content, name: content, widget: markdown }
-    - { label: 'Featured Image', name: featuredImage, widget: image, required: false }
+    label: Shop Page
+    format: json
+    file: 'app/content/shop.json'
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Content, name: content, widget: markdown }
+      - { label: 'Featured Image', name: featuredImage, widget: image, required: false }
 
   - name: 'about'
-  label: About Page
-  format: json
-  file: 'app/content/about.json'
-  fields:
-    - { label: Title, name: title, widget: string }
-    - { label: Content, name: content, widget: markdown }
-    - { label: 'Featured Image', name: featuredImage, widget: image, required: false }
+    label: About Page
+    format: json
+    file: 'app/content/about.json'
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Content, name: content, widget: markdown }
+      - { label: 'Featured Image', name: featuredImage, widget: image, required: false }
     
   - name: 'pages'
-  label: 'Product Pages'
-  folder: 'app/content/pages'
-  create: true
-  slug: '{{slug}}'
-  format: 'json'
-  fields:
-    - { label: Title, name: title, widget: string }
-    - { label: Subtitle, name: subtitle, widget: text, required: false }
-    - { label: Content, name: content, widget: markdown }
-    - { label: 'Featured Image', name: featuredImage, widget: image, required: false }
-    - { label: 'SEO Description', name: seoDescription, widget: text, required: false }
-    - { label: 'SEO Meta Image', name: seoMetaImage, widget: image, required: false }
+    label: 'Product Pages'
+    folder: 'app/content/pages'
+    create: true
+    slug: '{{slug}}'
+    format: 'json'
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Subtitle, name: subtitle, widget: text, required: false }
+      - { label: Content, name: content, widget: markdown }
+      - { label: 'Featured Image', name: featuredImage, widget: image, required: false }
+      - { label: 'SEO Description', name: seoDescription, widget: text, required: false }
+      - { label: 'SEO Meta Image', name: seoMetaImage, widget: image, required: false }
  
