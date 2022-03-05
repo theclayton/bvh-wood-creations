@@ -40,26 +40,30 @@ collections:
           - { label: 'Background color', name: backgroundColor, widget: string }
           - { label: Lang, name: lang, widget: string, default: en }
 
-  - name: 'shop'
-    label: Shop Page
-    format: json
-    file: 'app/content/shop.json'
-    fields:
-      - { label: Title, name: title, widget: string }
-      - { label: Content, name: content, widget: markdown }
-      - { label: 'Featured Image', name: featuredImage, widget: image, required: false }
-
-  - name: 'about'
-    label: About Page
-    format: json
-    file: 'app/content/about.json'
-    fields:
-      - { label: Title, name: title, widget: string }
-      - { label: Content, name: content, widget: markdown }
-      - { label: 'Featured Image', name: featuredImage, widget: image, required: false }
-    
-  - name: 'pages'
-    label: 'Product Pages'
+  - label: Main Pages
+    name: main-pages
+    files:
+      - name: 'shop'
+        label: Shop Page
+        format: json
+        file: 'app/content/shop.json'
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Content, name: content, widget: markdown }
+          - { label: 'Featured Image', name: featuredImage, widget: image, required: false }
+              
+      - name: 'about'
+        label: About Page
+        format: json
+        file: 'app/content/about.json'
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Content, name: content, widget: markdown }
+          - { label: 'Featured Image', name: featuredImage, widget: image, required: false }
+     
+        
+  - label: 'Product Pages'
+    name: 'produc-pages'
     folder: 'app/content/pages'
     create: true
     slug: '{{slug}}'
