@@ -1,4 +1,4 @@
-# BVH Wood Creations Marketing Site
+# BVH Wood Creations
 
 ```bash
 # install dependencies
