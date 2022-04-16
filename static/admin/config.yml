@@ -1,0 +1,61 @@
+# Backend https://www.netlifycms.org/docs/configuration-options/#backend
+backend:
+  name: git-gateway
+  branch: main
+
+# Publish mode https://www.netlifycms.org/docs/configuration-options/#publish-mode
+publish_mode: editorial_workflow
+
+# Media and Public Folders https://www.netlifycms.org/docs/configuration-options/#media-and-public-folders
+media_folder: "/static/images/uploads" # Media files will be stored in the repo under images/uploads
+public_folder: "/images/uploads"
+
+# Collections https://www.netlifycms.org/docs/configuration-options/#collections
+collections:
+  - label: General Settings
+    name: general
+    files:
+      - name: "meta"
+        label: Meta
+        format: json
+        file: "/content/meta.json"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Content, name: content, widget: string }
+          - { label: "Fav Icon", name: favicon, widget: image }
+
+  - label: Components
+    name: components
+    files:
+      - name: "header"
+        label: Header
+        format: json
+        file: "/content/components/header.json"
+        fields:
+          - { label: "Logo", name: logo, widget: image }
+          - { label: "Logo alt text", name: logoAlt, widget: string }
+
+  - label: Main Pages
+    name: main-pages
+    files:
+      - name: "index"
+        label: Home Page
+        format: json
+        file: "/content/pages/index.json"
+        fields:
+          - { label: Heading, name: heading, widget: string }
+          - { label: Subheading, name: subheading, widget: string }
+
+      - name: "shop"
+        label: Shop Page
+        format: json
+        file: "/content/pages/shop.json"
+        fields:
+          - { label: Heading, name: heading, widget: string }
+
+      - name: "about"
+        label: About Page
+        format: json
+        file: "/content/pages/about.json"
+        fields:
+          - { label: Heading, name: heading, widget: string }
