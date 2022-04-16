@@ -1,12 +1,13 @@
-# fav color
+# BVH Wood Creations Marketing Site
 
-#1C3C68
+Includes Netlify CMS backend content management for editing basic text fields and images.
 
-# bare-bones
+### Details
 
-Bare-bones Vue, Nuxt, Vuetify, Netlify CMS project without all the distractions
+Fav Color
+`#1C3C68`
 
-Includes Netlify CMS backend content management for basic text fields and images.
+Goal feel: Sleek, easy to look at, minimalistic, and gritty. Using color from palette. 
 
 ## Build Setup
 
