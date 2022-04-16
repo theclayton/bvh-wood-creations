@@ -1,17 +1,28 @@
-# BVH Wood Creations
+# fav color
+
+#1C3C68
+
+# bare-bones
+
+Bare-bones Vue, Nuxt, Vuetify, Netlify CMS project without all the distractions
+
+Includes Netlify CMS backend content management for basic text fields and images.
+
+## Build Setup
 
 ```bash
 # install dependencies
-yarn install
+$ npm install
 
 # serve with hot reload at localhost:3000
-yarn dev
+$ npm run dev
 
-# build for production with minification
-yarn generate
+# build for production and launch server
+$ npm run build
+$ npm run start
 
-# run all tests
-yarn test
+# generate static project
+$ npm run generate
 ```
 
 ### Using Netlify CMS
