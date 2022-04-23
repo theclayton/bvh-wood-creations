@@ -1,8 +1,15 @@
 <template>
   <v-container>
-    <v-card>
-      <v-card-title class="headline"> {{ heading }} </v-card-title>
-    </v-card>
+    <h1 class="headline">{{ heading }}</h1>
+    <h2>{{ subheading }}</h2>
+    <p>{{ aboutText }}</p>
+    <v-img
+      max-height="250"
+      max-width="250"
+      class="ml-2 mt-3"
+      :src="aboutImage"
+      :alt="aboutImageAlt"
+    ></v-img>
   </v-container>
 </template>
 

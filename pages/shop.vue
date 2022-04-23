@@ -1,8 +1,11 @@
 <template>
   <v-container>
-    <v-card>
-      <v-card-title class="headline"> {{ heading }} </v-card-title>
-    </v-card>
+    <v-card-title class="headline"> {{ heading }} </v-card-title>
+    <v-divider></v-divider>
+    <!-- TODO grid of products
+          Dynamically generated with CMS
+          Pulls title, subtitle and thumbnail from product content
+       -->
   </v-container>
 </template>
 
