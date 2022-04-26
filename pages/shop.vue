@@ -1,6 +1,6 @@
 <template>
-  <v-container>
-    <v-card-title class="headline"> {{ heading }} </v-card-title>
+  <v-container class="pt-16">
+    <h1 class="text-h2 pt-16">{{ heading }}</h1>
     <v-divider></v-divider>
     <!-- TODO grid of products
           Dynamically generated with CMS

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-app-bar flat prominent dense elevation="1" color="primaryBlue">
+    <v-app-bar fixed prominent dense elevation="1" color="primaryBlue">
       <NuxtLink to="/" class="text-decoration-none">
         <v-img
           max-height="75"

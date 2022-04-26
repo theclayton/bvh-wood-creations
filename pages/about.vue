@@ -1,8 +1,8 @@
 <template>
-  <v-container>
-    <h1 class="headline">{{ heading }}</h1>
-    <h2>{{ subheading }}</h2>
-    <p>{{ aboutText }}</p>
+  <v-container class="pt-16">
+    <h1 class="headline pt-16">{{ heading }}</h1>
+    <h2 class="text-h2">{{ subheading }}</h2>
+    <p class="pt-2">{{ aboutText }}</p>
     <v-img
       max-height="250"
       max-width="250"

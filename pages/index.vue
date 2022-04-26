@@ -1,21 +1,26 @@
 <template>
   <div class="text-center">
     <!-- MAIN SECTION -->
-    <!-- <v-img
-      max-height="500"
-      class="ml-2 mt-3"
-      :src="mainBackgroundImage"
-      :alt="mainBackgroundImageAlt"
-    ></v-img> -->
+    <div class="pt-16">
+      <v-img
+        max-height="500"
+        :src="mainBackgroundImage"
+        :alt="mainBackgroundImageAlt"
+      >
+        <v-container class="mt-16">
+          <h1 class="mt-16 text-h1 font-weight-thin white--text">
+            {{ mainHeading }}
+          </h1>
+          <h2 class="mt-4 mb-15 text-h4 font-weight-light white--text">
+            {{ mainSubheading }}
+          </h2>
 
+          <v-divider class="my-10"></v-divider> </v-container
+      ></v-img>
+    </div>
+
+    <!-- SHOP SECTION -->
     <v-container>
-      <h1 class="text-h2 mt-15">{{ mainHeading }}</h1>
-      <h2 class="text-subtitle-1 pb-15">{{ mainSubheading }}</h2>
-
-      <v-divider class="my-10"></v-divider>
-
-      <!-- SHOP SECTION -->
-
       <h2>{{ shopHeading }}</h2>
       <h3>{{ shopSubheading }}</h3>
 
@@ -102,3 +107,4 @@ export default {
   },
 };
 </script>
+
