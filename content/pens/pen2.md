@@ -1,5 +1,5 @@
 ---
-title: Pen 1
+title: Pen 2
 subtitle: Subtitle for pen
 etsyLink: https://etsy.com
 thumbnail: /images/uploads/pen.jpeg
