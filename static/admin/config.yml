@@ -55,51 +55,7 @@ collections:
           - { label: Main Section Image, name: mainSectionImage, widget: image }
           - { label: Shop Heading, name: shopHeading, widget: string }
           - { label: Shop Subheading, name: shopSubheading, widget: string }
-          - {
-              label: Shop Featured Item 1 Image,
-              name: shopFeatured1Image,
-              widget: image,
-            }
-          - {
-              label: Shop Featured Item 1 Title,
-              name: shopFeatured1Title,
-              widget: string,
-            }
-          - {
-              label: Shop Featured Item 1 Description,
-              name: shopFeatured1Description,
-              widget: string,
-            }
-          - {
-              label: Shop Featured Item 2 Image,
-              name: shopFeatured2Image,
-              widget: image,
-            }
-          - {
-              label: Shop Featured Item 2 Title,
-              name: shopFeatured2Title,
-              widget: string,
-            }
-          - {
-              label: Shop Featured Item 2 Description,
-              name: shopFeatured2Description,
-              widget: string,
-            }
-          - {
-              label: Shop Featured Item 3 Image,
-              name: shopFeatured3Image,
-              widget: image,
-            }
-          - {
-              label: Shop Featured Item 3 Title,
-              name: shopFeatured3Title,
-              widget: string,
-            }
-          - {
-              label: Shop Featured Item 3 Description,
-              name: shopFeatured3Description,
-              widget: string,
-            }
+          - { label: Shop Featured Item 1, name: shopFeatured1, widget: string }
           - { label: About Text, name: aboutText, widget: string }
           - { label: About Image, name: aboutImage, widget: image }
           - { label: About Image Alt, name: aboutImageAlt, widget: string }
@@ -147,4 +103,4 @@ collections:
         widget: list
         fields:
           - { label: Image, name: image, widget: image }
-      - { label: "Description", name: "description", widget: "markdown" }
+      - { label: "Description", name: "body", widget: "markdown" }
