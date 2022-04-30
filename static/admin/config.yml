@@ -67,8 +67,8 @@ collections:
           - { label: Shop Heading, name: shopHeading, widget: string }
           - { label: Shop Subheading, name: shopSubheading, widget: string }
           - { label: Shop Featured Item 1, name: shopFeatured1, widget: string }
-          - { label: Shop Featured Item 2, name: shopFeatured1, widget: string }
-          - { label: Shop Featured Item 3, name: shopFeatured1, widget: string }
+          - { label: Shop Featured Item 2, name: shopFeatured2, widget: string }
+          - { label: Shop Featured Item 3, name: shopFeatured3, widget: string }
           - { label: About Text, name: aboutText, widget: string }
           - { label: About Image, name: aboutImage, widget: image }
           - { label: About Image Alt, name: aboutImageAlt, widget: string }
