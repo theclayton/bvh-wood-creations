@@ -1,9 +1,9 @@
 ---
 title: Pen 1
-subtitle: Subtitle for pen
+subtitle: Great little pen
 etsyLink: https://etsy.com
 thumbnail: /images/uploads/pen.jpeg
-images: ["image1", "image2"]
+images: ["/images/uploads/pen.jpeg", "/images/uploads/pen.jpeg"]
 ---
 
 ### Description

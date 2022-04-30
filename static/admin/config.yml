@@ -26,6 +26,11 @@ collections:
           - { label: Title, name: title, widget: string }
           - { label: Content, name: content, widget: string }
           - { label: "Fav Icon", name: favicon, widget: image }
+          - label: Colors
+            name: colors
+            widget: list
+            fields:
+              - { label: Color Hex value, name: color, widget: string }
 
   - label: Components
     name: components
@@ -37,6 +42,12 @@ collections:
         fields:
           - { label: "Logo", name: logo, widget: image }
           - { label: "Logo alt text", name: logoAlt, widget: string }
+      - name: "footer"
+        label: Footer
+        format: json
+        file: "/content/components/footer.json"
+        fields:
+          - { label: "Copyright", name: copyright, widget: string }
 
   - label: Main Pages
     name: main-pages
@@ -56,6 +67,8 @@ collections:
           - { label: Shop Heading, name: shopHeading, widget: string }
           - { label: Shop Subheading, name: shopSubheading, widget: string }
           - { label: Shop Featured Item 1, name: shopFeatured1, widget: string }
+          - { label: Shop Featured Item 2, name: shopFeatured1, widget: string }
+          - { label: Shop Featured Item 3, name: shopFeatured1, widget: string }
           - { label: About Text, name: aboutText, widget: string }
           - { label: About Image, name: aboutImage, widget: image }
           - { label: About Image Alt, name: aboutImageAlt, widget: string }
