@@ -2,7 +2,10 @@
 backend:
   name: git-gateway
   branch: master
-
+  accept_roles:
+    - admin
+    - editor
+    
 # Publish mode https://www.netlifycms.org/docs/configuration-options/#publish-mode
 publish_mode: editorial_workflow
 
@@ -126,3 +129,20 @@ collections:
           - { label: aboutImageAlt, name: aboutImageAlt, widget: string }
           - { label: Page SEO Title, name: meta.title, widget: string }
           - { label: Page SEO Description, name: meta.content, widget: string }
+
+
+  - name: 'pens' # Used in routes, ie.: /admin/collections/:slug/edit
+      label: 'Pens' # Used in the UI
+      label_singular: 'Post' # Used in the UI, ie: "New Post"
+      folder: 'content/pens'
+      slug: '{{slug}}'
+      summary: '{{title}} -- {{subtitle}}'
+      create: true # Allow users to create new documents in this collection
+      fields: # The fields each document in this collection have
+        - { label: 'Title', name: 'title', widget: 'string'  }
+        - { label: 'Subtitle', name: 'subtitle', widget: 'string' }
+        - { label: mainImage, name: mainImage, widget: image }
+        - { label: mainImageAlt, name: mainImageAlt, widget: string }
+        - { label: "Body", name: "body", widget: "markdown" }
+        - { label: Page SEO Title, name: meta.title, widget: string }
+        - { label: Page SEO Description, name: meta.content, widget: string }
