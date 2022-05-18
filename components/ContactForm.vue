@@ -64,8 +64,6 @@
 </template>
 
 <script>
-import axios from "axios";
-
 export default {
   data() {
     return {
@@ -99,14 +97,15 @@ export default {
         )
         .join("&");
     },
+
     async onSubmit() {
       if (this.$refs.form.validate()) {
         this.isLoading = true;
         this.submitButtonText = "Sending...";
 
         try {
-          await axios.post(
-            "/",
+          await this.$axios.$post(
+            "https://bvhwoodcreations.com/",
             this.encode({
               "form-name": "bvh-form",
               ...this.form,
