@@ -1,6 +1,6 @@
 <template>
   <v-row justify="center">
-    <v-col md="5">
+    <!-- <v-col md="5">
       <p class="text-subtitle-1">Contact us with the form below:</p>
 
       <v-form
@@ -59,7 +59,7 @@
           {{ submitButtonText }}
         </v-btn>
       </v-form>
-    </v-col>
+    </v-col> -->
   </v-row>
 </template>
 
