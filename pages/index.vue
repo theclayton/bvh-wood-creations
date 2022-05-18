@@ -89,13 +89,14 @@
       <h2>{{ contactHeading }}</h2>
       <h4 class="pb-10">{{ contactPhone }}</h4>
 
-      <p class="pb-8">contact form coming soon...</p>
+      <contact-form></contact-form>
     </v-container>
   </div>
 </template>
 
 <script>
 import content from "../content/pages/index.json";
+import ContactForm from "../components/ContactForm.vue";
 
 export default {
   head() {
@@ -112,6 +113,9 @@ export default {
   },
   data() {
     return content;
+  },
+  components: {
+    ContactForm,
   },
   async asyncData({ $content, params, error }) {
     let featured1;

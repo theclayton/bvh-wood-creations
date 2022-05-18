@@ -17,12 +17,21 @@
       <p class="pt-5 pl-6 pr-6">{{ aboutText }}</p>
     </div>
 
-    <v-spacer class="py-16"></v-spacer>
+    <v-divider class="my-10"></v-divider>
+
+    <!-- CONTACT SECTION -->
+    <div class="text-center">
+      <h2>{{ contactHeading }}</h2>
+      <h4 class="pb-10">{{ contactPhone }}</h4>
+
+      <contact-form></contact-form>
+    </div>
   </v-container>
 </template>
 
 <script>
 import content from "../content/pages/about.json";
+import ContactForm from "../components/ContactForm.vue";
 
 export default {
   head() {
@@ -36,6 +45,9 @@ export default {
         },
       ],
     };
+  },
+  components: {
+    ContactForm,
   },
   data() {
     return content;
