@@ -103,25 +103,25 @@ export default {
         this.isLoading = true;
         this.submitButtonText = "Sending...";
 
-        try {
-          await this.$axios.$post(
-            "https://bvhwoodcreations.com/",
-            this.encode({
-              "form-name": "bvh-form",
-              ...this.form,
-            }),
-            {
-              header: { "Content-Type": "application/x-www-form-urlencoded" },
-            }
-          );
+        //     try {
+        //       await this.$axios.$post(
+        //         "https://bvhwoodcreations.com/",
+        //         this.encode({
+        //           "form-name": "bvh-form",
+        //           ...this.form,
+        //         }),
+        //         {
+        //           header: { "Content-Type": "application/x-www-form-urlencoded" },
+        //         }
+        //       );
 
-          this.error = "";
-          this.submitButtonText = "Sent!";
-        } catch (e) {
-          this.error = e.message;
-          this.isLoading = false;
-          this.submitButtonText = "Failed, try again?";
-        }
+        //       this.error = "";
+        //       this.submitButtonText = "Sent!";
+        //     } catch (e) {
+        //       this.error = e.message;
+        //       this.isLoading = false;
+        //       this.submitButtonText = "Failed, try again?";
+        //     }
       }
     },
   },
