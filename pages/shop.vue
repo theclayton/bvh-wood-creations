@@ -4,7 +4,7 @@
 
     <v-divider class="mt-4"></v-divider>
 
-    <v-layout row wrap class="mt-5 mb-16">
+    <v-row wrap justify="center" class="mt-5 mb-16">
       <v-card rounded="6" v-for="(pen, i) in pens" :key="i" class="ma-5">
         <NuxtLink :to="pen.path" class="text-decoration-none">
           <v-card-title>{{ pen.title }}</v-card-title>
@@ -12,7 +12,7 @@
           <v-img max-height="300" max-width="350" :src="pen.thumbnail"></v-img>
         </NuxtLink>
       </v-card>
-    </v-layout>
+    </v-row>
   </v-container>
 </template>
 
@@ -22,12 +22,12 @@ import content from "../content/pages/shop.json";
 export default {
   head() {
     return {
-      title: content.meta.title,
+      title: content.metaTitle,
       meta: [
         {
           hid: "shop",
           name: "shop",
-          content: content.meta.content,
+          content: content.metaContent,
         },
       ],
     };

@@ -36,12 +36,12 @@ import ContactForm from "../components/ContactForm.vue";
 export default {
   head() {
     return {
-      title: content.meta.title,
+      title: content.metaTitle,
       meta: [
         {
           hid: "about",
           name: "about",
-          content: content.meta.content,
+          content: content.metaContent,
         },
       ],
     };

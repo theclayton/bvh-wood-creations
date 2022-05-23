@@ -34,6 +34,17 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: pen.title,
+      meta: [
+        {
+          name: pen.title,
+          content: pen.subtitle,
+        },
+      ],
+    };
+  },
   async asyncData({ $content, params, error }) {
     let pen;
 

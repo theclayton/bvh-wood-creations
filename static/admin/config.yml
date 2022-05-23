@@ -15,17 +15,36 @@ public_folder: "/images/uploads"
 
 # Collections https://www.netlifycms.org/docs/configuration-options/#collections
 collections:
+  - label: Pens
+    name: pens
+    label_singular: Pen
+    folder: "/content/pens"
+    slug: "{{slug}}"
+    summary: "{{title}} - {{subtitle}}"
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - { label: Title, name: title, widget: string }
+      - { label: Subtitle, name: subtitle, widget: string }
+      - { label: Etsy Link, name: etsyLink, widget: string }
+      - { label: Description, name: body, widget: markdown }
+      - { label: Thumbnail, name: thumbnail, widget: image }
+      - label: Images
+        name: images
+        widget: list
+        fields:
+          - { label: Image, name: image, widget: image }
+
   - label: General Settings
     name: general
     files:
-      - name: "meta"
+      - name: "Website metadata"
         label: Meta
         format: json
         file: "/content/meta.json"
         fields:
           - { label: Title, name: title, widget: string }
-          - { label: Content, name: content, widget: string }
-          - { label: "Fav Icon", name: favicon, widget: image }
+          - { label: SEO Description, name: content, widget: string }
+          - { label: Fav Icon, name: favicon, widget: image }
           - label: Colors
             name: colors
             widget: list
@@ -35,7 +54,7 @@ collections:
   - label: Components
     name: components
     files:
-      - name: "header"
+      - name: header
         label: Header
         format: json
         file: "/content/components/header.json"
@@ -52,7 +71,7 @@ collections:
   - label: Main Pages
     name: main-pages
     files:
-      - name: "index"
+      - name: index
         label: Home Page
         format: json
         file: "/content/pages/index.json"
@@ -63,30 +82,40 @@ collections:
               name: mainSubheading,
               widget: string,
             }
-          - { label: Main Section Image, name: mainSectionImage, widget: image }
+          - {
+              label: Main Section Image,
+              name: mainBackgroundImage,
+              widget: image,
+            }
+          - {
+              label: Main Section Image Alt Text,
+              name: mainBackgroundImageAlt,
+              widget: string,
+            }
           - { label: Shop Heading, name: shopHeading, widget: string }
           - { label: Shop Subheading, name: shopSubheading, widget: string }
           - { label: Shop Featured Item 1, name: shopFeatured1, widget: string }
           - { label: Shop Featured Item 2, name: shopFeatured2, widget: string }
           - { label: Shop Featured Item 3, name: shopFeatured3, widget: string }
+          - { label: Shop Button Text, name: shopButton, widget: string }
           - { label: About Text, name: aboutText, widget: string }
           - { label: About Image, name: aboutImage, widget: image }
           - { label: About Image Alt, name: aboutImageAlt, widget: string }
           - { label: Contact Heading, name: contactHeading, widget: string }
           - { label: Contact Phone, name: contactPhone, widget: string }
-          - { label: Page SEO Title, name: meta.title, widget: string }
-          - { label: Page SEO Description, name: meta.content, widget: string }
+          - { label: Page SEO Title, name: metaTitle, widget: string }
+          - { label: Page SEO Description, name: metaContent, widget: string }
 
-      - name: "shop"
+      - name: shop
         label: Shop Page
         format: json
         file: "/content/pages/shop.json"
         fields:
           - { label: Heading, name: heading, widget: string }
-          - { label: Page SEO Title, name: meta.title, widget: string }
-          - { label: Page SEO Description, name: meta.content, widget: string }
+          - { label: Page SEO Title, name: metaTitle, widget: string }
+          - { label: Page SEO Description, name: metaContent, widget: string }
 
-      - name: "about"
+      - name: about
         label: About Page
         format: json
         file: "/content/pages/about.json"
@@ -96,24 +125,7 @@ collections:
           - { label: aboutText, name: aboutText, widget: string }
           - { label: aboutImage, name: aboutImage, widget: image }
           - { label: aboutImageAlt, name: aboutImageAlt, widget: string }
-          - { label: Page SEO Title, name: meta.title, widget: string }
-          - { label: Page SEO Description, name: meta.content, widget: string }
-
-  - label: "Pens"
-    name: "pens"
-    label_singular: "Pen"
-    folder: "/content/pens"
-    slug: "{{slug}}"
-    summary: "{{title}} -- {{subtitle}}"
-    create: true # Allow users to create new documents in this collection
-    fields: # The fields each document in this collection have
-      - { label: Title, name: title, widget: string }
-      - { label: Subtitle, name: subtitle, widget: string }
-      - { label: Thumbnail, name: thumbnail, widget: string }
-      - { label: Etsy Link, name: etsyLink, widget: string }
-      - label: Images
-        name: images
-        widget: list
-        fields:
-          - { label: Image, name: image, widget: image }
-      - { label: "Description", name: "body", widget: "markdown" }
+          - { label: Contact Heading, name: contactHeading, widget: string }
+          - { label: Contact Phone, name: contactPhone, widget: string }
+          - { label: Page SEO Title, name: metaTitle, widget: string }
+          - { label: Page SEO Description, name: metaContent, widget: string }

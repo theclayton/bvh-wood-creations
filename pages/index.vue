@@ -24,11 +24,15 @@
       <h2 class="pt-14 text-h2 font-weight-black">{{ shopHeading }}</h2>
       <h3 class="pt-3 text-h4 font-weight-light">{{ shopSubheading }}</h3>
 
-      <div class="mt-13 pb-8 d-flex flex-row justify-space-between text-left">
-        <v-card class="rounded-card">
+      <v-row wrap justify="center" class="mt-13 pb-8 text-left">
+        <v-card class="rounded-card ma-3">
           <NuxtLink :to="`/pens/${shopFeatured1}`" class="text-decoration-none">
-            <v-card-title>{{ featured1.title }}</v-card-title>
-            <v-card-subtitle>{{ featured1.subtitle }}</v-card-subtitle>
+            <v-card-title class="mainBlue--text text--darken-3">
+              {{ featured1.title }}
+            </v-card-title>
+            <v-card-subtitle class="mainBlue--text text--darken-3">
+              {{ featured1.subtitle }}
+            </v-card-subtitle>
             <v-img
               max-height="300"
               max-width="350"
@@ -37,10 +41,14 @@
           </NuxtLink>
         </v-card>
 
-        <v-card class="rounded-card">
+        <v-card class="rounded-card ma-3">
           <NuxtLink :to="`/pens/${shopFeatured2}`" class="text-decoration-none">
-            <v-card-title>{{ featured2.title }}</v-card-title>
-            <v-card-subtitle>{{ featured2.subtitle }}</v-card-subtitle>
+            <v-card-title class="mainBlue--text text--darken-3">
+              {{ featured2.title }}
+            </v-card-title>
+            <v-card-subtitle class="mainBlue--text text--darken-3">
+              {{ featured2.subtitle }}
+            </v-card-subtitle>
             <v-img
               max-height="300"
               max-width="350"
@@ -49,10 +57,14 @@
           </NuxtLink>
         </v-card>
 
-        <v-card class="rounded-card">
+        <v-card class="rounded-card ma-3">
           <NuxtLink :to="`/pens/${shopFeatured3}`" class="text-decoration-none">
-            <v-card-title>{{ featured3.title }}</v-card-title>
-            <v-card-subtitle>{{ featured3.subtitle }}</v-card-subtitle>
+            <v-card-title class="mainBlue--text text--darken-3">
+              {{ featured3.title }}
+            </v-card-title>
+            <v-card-subtitle class="mainBlue--text text--darken-3">
+              {{ featured3.subtitle }}
+            </v-card-subtitle>
             <v-img
               max-height="300"
               max-width="350"
@@ -60,7 +72,13 @@
             ></v-img>
           </NuxtLink>
         </v-card>
-      </div>
+      </v-row>
+
+      <a class="text-decoration-none">
+        <v-btn x-large rounded color="grey darken-3" class="my-5 white--text"
+          >{{ shopButton }}
+        </v-btn>
+      </a>
 
       <v-divider class="my-16"></v-divider>
 
@@ -101,12 +119,12 @@ import ContactForm from "../components/ContactForm.vue";
 export default {
   head() {
     return {
-      title: content.meta.title,
+      title: content.metaTitle,
       meta: [
         {
           hid: "index",
           name: "index",
-          content: content.meta.content,
+          content: content.metaContent,
         },
       ],
     };

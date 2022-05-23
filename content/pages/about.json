@@ -6,8 +6,6 @@
     "aboutImageAlt": "About BVH Wood Creations",
     "contactHeading": "Contact us",
     "contactPhone": "+1 (385) 274-9296",
-    "meta": {
-        "title": "About us - BVH Wood Creations",
-        "content": "We create fine handmade wood working products."
-    }
+    "metaTitle": "About us - BVH Wood Creations",
+    "metaContent": "We create fine handmade wood working products."
 }

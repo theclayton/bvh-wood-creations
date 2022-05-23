@@ -8,14 +8,13 @@
     "shopFeatured1":"pen1",
     "shopFeatured2":"pen2",
     "shopFeatured3":"pen3",
+    "shopButton": "Shop All Pens",
     "aboutHeading": "About BVH Wood Creations",
     "aboutText": "BVH Wood Creations about information is coming soon. Check back soon to read an amazing summary about our company and all the great things that we do...",
     "aboutImage": "/images/uploads/bvh-logo-black-original.png",
     "aboutImageAlt": "About BVH Wood Creations",
     "contactHeading": "Contact us",
     "contactPhone": "+1 (385) 274-9296",
-    "meta": {
-        "title": "BVH Wood Creations Official Website",
-        "content": "Fine handmade wood working products."
-    }
+    "metaTitle": "BVH Wood Creations Official Website",
+    "metaContent": "Fine handmade wood working products."
 }
