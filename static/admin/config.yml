@@ -28,7 +28,7 @@ collections:
       - { label: Etsy Link, name: etsyLink, widget: string }
       - { label: Description, name: body, widget: markdown }
       - { label: Thumbnail, name: thumbnail, widget: image }
-      - label: Images
+      - label: Slideshow Images
         name: images
         widget: list
         fields:
