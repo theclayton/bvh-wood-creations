@@ -74,11 +74,11 @@
         </v-card>
       </v-row>
 
-      <a class="text-decoration-none">
+      <NuxtLink to="/shop" class="text-decoration-none">
         <v-btn x-large rounded color="grey darken-3" class="my-5 white--text"
           >{{ shopButton }}
         </v-btn>
-      </a>
+      </NuxtLink>
 
       <v-divider class="my-16"></v-divider>
 
