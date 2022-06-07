@@ -6,4 +6,5 @@ thumbnail: /images/uploads/pen.jpeg
 images:
   - image: /images/uploads/pen.jpeg
 ---
+
 Brand new pen

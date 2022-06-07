@@ -11,7 +11,7 @@
           <v-carousel-item
             v-for="(img, i) in pen.images"
             :key="i"
-            :src="img"
+            :src="img.image"
           ></v-carousel-item>
         </v-carousel>
       </v-col>
@@ -36,11 +36,11 @@
 export default {
   head() {
     return {
-      title: pen.title,
+      title: this.pen.title,
       meta: [
         {
-          name: pen.title,
-          content: pen.subtitle,
+          name: this.pen.title,
+          content: this.pen.subtitle,
         },
       ],
     };
