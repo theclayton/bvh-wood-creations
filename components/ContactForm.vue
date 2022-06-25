@@ -1,17 +1,15 @@
 <template>
   <v-row justify="center">
-    <!-- <v-col md="5">
+    <v-col md="5">
       <p class="text-subtitle-1">Contact us with the form below:</p>
 
       <v-form
         name="bvh-contact-form"
-        method="post"
         ref="form"
         lazy-validation
         netlify
         data-netlify="true"
         data-netlify-honeypot="bot-field"
-        v-on:submit.prevent="onSubmit"
       >
         <input type="hidden" name="bvh-form" value="bvh-contact-form" />
 
@@ -49,7 +47,7 @@
         <p :v-if="error" class="red--text">{{ error }}</p>
         <v-btn
           :disabled="isLoading"
-          type="submit"
+          @click="onSubmit()"
           large
           rounded
           color="primaryBlue"
@@ -59,7 +57,7 @@
           {{ submitButtonText }}
         </v-btn>
       </v-form>
-    </v-col> -->
+    </v-col>
   </v-row>
 </template>
 
@@ -103,25 +101,25 @@ export default {
         this.isLoading = true;
         this.submitButtonText = "Sending...";
 
-        //     try {
-        //       await this.$axios.$post(
-        //         "https://bvhwoodcreations.com/",
-        //         this.encode({
-        //           "form-name": "bvh-form",
-        //           ...this.form,
-        //         }),
-        //         {
-        //           header: { "Content-Type": "application/x-www-form-urlencoded" },
-        //         }
-        //       );
+        try {
+          await this.$axios.$post(
+            "https://bvhwoodcreations.com/",
+            this.encode({
+              "form-name": "bvh-form",
+              ...this.form,
+            }),
+            {
+              header: { "Content-Type": "application/x-www-form-urlencoded" },
+            }
+          );
 
-        //       this.error = "";
-        //       this.submitButtonText = "Sent!";
-        //     } catch (e) {
-        //       this.error = e.message;
-        //       this.isLoading = false;
-        //       this.submitButtonText = "Failed, try again?";
-        //     }
+          this.error = "";
+          this.submitButtonText = "Sent!";
+        } catch (e) {
+          this.error = e.message;
+          this.isLoading = false;
+          this.submitButtonText = "Failed, try again?";
+        }
       }
     },
   },
