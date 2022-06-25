@@ -23,8 +23,6 @@
     <div class="text-center">
       <h2>{{ contactHeading }}</h2>
       <h4 class="pb-10">{{ contactPhone }}</h4>
-
-      <contact-form></contact-form>
     </div>
   </v-container>
 </template>
