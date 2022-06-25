@@ -13,7 +13,7 @@
           data-netlify-honeypot="bot-field"
           v-on:submit.prevent="onSubmit"
         >
-          <input type="hidden" name="bvh-form" value="bvh-contact-form" />
+          <input type="hidden" name="contact-form" value="bvh-contact-form" />
 
           <v-text-field
             placeholder="Full Name"
