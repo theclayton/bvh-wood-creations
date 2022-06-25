@@ -76,6 +76,7 @@ export default {
       submitButtonText: "Send Message",
       error: "",
       form: {
+        "form-name": "bvh-contact-form",
         firstName: "",
         lastName: "",
         email: "",
@@ -108,20 +109,11 @@ export default {
         this.submitButtonText = "Sending...";
 
         try {
-          await axios.post(
-            "/",
-            this.encode({
-              "form-name": "bvh-contact-form",
-              ...this.form,
-            }),
-            {
-              headers: {
-                headers: {
-                  "Content-Type": "application/x-www-form-urlencoded",
-                },
-              },
-            }
-          );
+          await axios.post("/", this.encode(this.form), {
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded",
+            },
+          });
 
           this.error = "";
           this.submitButtonText = "Sent!";
