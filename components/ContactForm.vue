@@ -16,18 +16,10 @@
           <input type="hidden" name="bvh-form" value="bvh-contact-form" />
 
           <v-text-field
-            placeholder="First Name"
+            placeholder="Full Name"
             solo
             clearable
-            v-model="form.firstName"
-            :rules="nameRules"
-          ></v-text-field>
-
-          <v-text-field
-            placeholder="Last Name"
-            solo
-            clearable
-            v-model="form.lastName"
+            v-model="form.fullName"
             :rules="nameRules"
           ></v-text-field>
 
@@ -75,8 +67,7 @@ export default {
       error: "",
       form: {
         "form-name": "bvh-contact-form",
-        firstName: "",
-        lastName: "",
+        fullName: "",
         email: "",
         message: "",
       },
