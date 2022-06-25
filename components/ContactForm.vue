@@ -9,10 +9,8 @@
           method="POST"
           ref="form"
           lazy-validation
-          netlify
           data-netlify="true"
           data-netlify-honeypot="bot-field"
-          accept-charset="UTF-8"
           v-on:submit.prevent="onSubmit"
         >
           <input type="hidden" name="bvh-form" value="bvh-contact-form" />

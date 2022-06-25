@@ -1,6 +1,7 @@
 import content from "./content/meta.json";
 
 export default {
+  target: "static",
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: "%s - BVH Wood Creations",
