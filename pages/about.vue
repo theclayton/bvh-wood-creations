@@ -31,7 +31,6 @@
 
 <script>
 import content from "../content/pages/about.json";
-import ContactForm from "../components/ContactForm.vue";
 
 export default {
   head() {
@@ -45,9 +44,6 @@ export default {
         },
       ],
     };
-  },
-  components: {
-    ContactForm,
   },
   data() {
     return content;

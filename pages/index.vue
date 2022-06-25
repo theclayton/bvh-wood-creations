@@ -129,7 +129,7 @@ export default {
     };
   },
   data() {
-    return content;
+    return { ...content };
   },
   async asyncData({ $content, params, error }) {
     let featured1;
