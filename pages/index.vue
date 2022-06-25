@@ -114,6 +114,7 @@
 
 <script>
 import content from "../content/pages/index.json";
+import ContactForm from "../components/ContactForm.vue";
 
 export default {
   head() {
@@ -130,6 +131,9 @@ export default {
   },
   data() {
     return content;
+  },
+  components: {
+    ContactForm,
   },
   async asyncData({ $content, params, error }) {
     let featured1;
