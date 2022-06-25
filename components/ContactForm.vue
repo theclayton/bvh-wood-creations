@@ -48,7 +48,7 @@
             v-model="form.message"
           ></v-textarea>
 
-          <p :v-if="error" class="red--text">{{ error }}</p>
+          <p :v-show="error" class="red--text">{{ error }}</p>
           <v-btn
             :disabled="isLoading"
             type="submit"
