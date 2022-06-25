@@ -109,9 +109,16 @@ export default {
         this.submitButtonText = "Sending...";
 
         try {
-          await axios.post("/", this.encode(this.form), {
-            header: { "Content-Type": "application/x-www-form-urlencoded" },
+          await axios({
+            method: "post",
+            url: "/",
+            data: this.encode(this.form),
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
           });
+
+          // await axios.post("/", this.encode(this.form), {
+          //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          // });
 
           this.error = "";
           this.submitButtonText = "Sent!";
