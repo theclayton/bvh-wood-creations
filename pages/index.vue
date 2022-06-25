@@ -107,9 +107,7 @@
       <h2>{{ contactHeading }}</h2>
       <h4 class="pb-10">{{ contactPhone }}</h4>
 
-      <client-only>
-        <contact-form></contact-form>
-      </client-only>
+      <contact-form></contact-form>
     </v-container>
   </div>
 </template>
