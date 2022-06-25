@@ -95,17 +95,33 @@ export default {
     };
   },
   methods: {
+    encode(data) {
+      return Object.keys(data)
+        .map(
+          (key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+        )
+        .join("&");
+    },
     async onSubmit() {
       if (this.$refs.form.validate()) {
         this.isLoading = true;
         this.submitButtonText = "Sending...";
 
         try {
-          await axios.post("/", this.form, {
-            headers: {
-              Accept: "application/json",
-            },
-          });
+          await axios.post(
+            "/",
+            this.encode({
+              "form-name": "bvh-contact-form",
+              ...this.form,
+            }),
+            {
+              headers: {
+                headers: {
+                  "Content-Type": "application/x-www-form-urlencoded",
+                },
+              },
+            }
+          );
 
           this.error = "";
           this.submitButtonText = "Sent!";
