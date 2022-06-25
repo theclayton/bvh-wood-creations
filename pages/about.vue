@@ -24,6 +24,10 @@
       <h2>{{ contactHeading }}</h2>
       <h4 class="pb-10">{{ contactPhone }}</h4>
     </div>
+
+    <client-only>
+      <contact-form></contact-form>
+    </client-only>
   </v-container>
 </template>
 
