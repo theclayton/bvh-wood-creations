@@ -1,67 +1,74 @@
 <template>
-  <v-row justify="center">
-    <v-col md="5">
-      <p class="text-subtitle-1">Contact us with the form below:</p>
+  <div>
+    <v-row justify="center">
+      <v-col md="5">
+        <p class="text-subtitle-1">Contact us with the form below:</p>
 
-      <v-form
-        name="bvh-contact-form"
-        ref="form"
-        lazy-validation
-        netlify
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-      >
-        <input type="hidden" name="bvh-form" value="bvh-contact-form" />
-
-        <v-text-field
-          placeholder="First Name"
-          solo
-          clearable
-          v-model="form.firstName"
-          :rules="nameRules"
-        ></v-text-field>
-
-        <v-text-field
-          placeholder="Last Name"
-          solo
-          clearable
-          v-model="form.lastName"
-          :rules="nameRules"
-        ></v-text-field>
-
-        <v-text-field
-          placeholder="Email Address"
-          solo
-          clearable
-          v-model="form.email"
-          :rules="emailRules"
-        ></v-text-field>
-
-        <v-textarea
-          placeholder="Message..."
-          solo
-          clearable
-          v-model="form.message"
-        ></v-textarea>
-
-        <p :v-if="error" class="red--text">{{ error }}</p>
-        <v-btn
-          :disabled="isLoading"
-          @click="onSubmit()"
-          large
-          rounded
-          color="primaryBlue"
-          class="text-decoration-none mt-1 mb-16 white--text"
-          on
+        <v-form
+          name="bvh-contact-form"
+          method="POST"
+          ref="form"
+          lazy-validation
+          netlify
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          accept-charset="UTF-8"
+          v-on:submit.prevent="onSubmit"
         >
-          {{ submitButtonText }}
-        </v-btn>
-      </v-form>
-    </v-col>
-  </v-row>
+          <input type="hidden" name="bvh-form" value="bvh-contact-form" />
+
+          <v-text-field
+            placeholder="First Name"
+            solo
+            clearable
+            v-model="form.firstName"
+            :rules="nameRules"
+          ></v-text-field>
+
+          <v-text-field
+            placeholder="Last Name"
+            solo
+            clearable
+            v-model="form.lastName"
+            :rules="nameRules"
+          ></v-text-field>
+
+          <v-text-field
+            placeholder="Email Address"
+            solo
+            clearable
+            v-model="form.email"
+            :rules="emailRules"
+          ></v-text-field>
+
+          <v-textarea
+            placeholder="Message..."
+            solo
+            clearable
+            v-model="form.message"
+          ></v-textarea>
+
+          <p :v-if="error" class="red--text">{{ error }}</p>
+          <v-btn
+            :disabled="isLoading"
+            type="submit"
+            large
+            rounded
+            color="primaryBlue"
+            class="text-decoration-none mt-1 mb-16 white--text"
+            on
+          >
+            {{ submitButtonText }}
+          </v-btn>
+        </v-form>
+      </v-col>
+    </v-row>
+  </div>
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   data() {
     return {
@@ -88,30 +95,17 @@ export default {
     };
   },
   methods: {
-    encode(data) {
-      return Object.keys(data)
-        .map(
-          (key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
-        )
-        .join("&");
-    },
-
     async onSubmit() {
       if (this.$refs.form.validate()) {
         this.isLoading = true;
         this.submitButtonText = "Sending...";
 
         try {
-          await this.$axios.$post(
-            "https://bvhwoodcreations.com/",
-            this.encode({
-              "form-name": "bvh-form",
-              ...this.form,
-            }),
-            {
-              header: { "Content-Type": "application/x-www-form-urlencoded" },
-            }
-          );
+          await axios.post("https://bvhwoodcreations.com/", this.form, {
+            headers: {
+              Accept: "application/json",
+            },
+          });
 
           this.error = "";
           this.submitButtonText = "Sent!";
