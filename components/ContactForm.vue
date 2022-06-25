@@ -101,7 +101,7 @@ export default {
         this.submitButtonText = "Sending...";
 
         try {
-          await axios.post("https://bvhwoodcreations.com/", this.form, {
+          await axios.post("/", this.form, {
             headers: {
               Accept: "application/json",
             },
