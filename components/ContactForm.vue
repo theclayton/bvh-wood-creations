@@ -110,9 +110,7 @@ export default {
 
         try {
           await axios.post("/", this.encode(this.form), {
-            headers: {
-              "Content-Type": "application/x-www-form-urlencoded",
-            },
+            header: { "Content-Type": "application/x-www-form-urlencoded" },
           });
 
           this.error = "";
