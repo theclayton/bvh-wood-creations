@@ -2,7 +2,7 @@
   <v-container class="pt-16">
     <h1 class="headline pt-16 pb-3">{{ heading }}</h1>
 
-    <div class="d-flex pb-16">
+    <div class="pb-16">
       <div>
         <h2 class="pt-2 text-h2 font-weight-black">{{ subheading }}</h2>
 
