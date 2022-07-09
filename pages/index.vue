@@ -34,8 +34,8 @@
               {{ featured1.subtitle }}
             </v-card-subtitle>
             <v-img
-              max-height="300"
-              max-width="350"
+              max-height="415"
+              max-width="315"
               :src="featured1.thumbnail"
             ></v-img>
           </NuxtLink>
@@ -50,8 +50,8 @@
               {{ featured2.subtitle }}
             </v-card-subtitle>
             <v-img
-              max-height="300"
-              max-width="350"
+              max-height="415"
+              max-width="315"
               :src="featured2.thumbnail"
             ></v-img>
           </NuxtLink>
@@ -66,8 +66,8 @@
               {{ featured3.subtitle }}
             </v-card-subtitle>
             <v-img
-              max-height="300"
-              max-width="350"
+              max-height="415"
+              max-width="315"
               :src="featured3.thumbnail"
             ></v-img>
           </NuxtLink>
@@ -83,23 +83,25 @@
       <v-divider class="my-16"></v-divider>
 
       <!-- ABOUT SECTION -->
-      <div class="d-flex pt-3 pb-5">
-        <div class="text-left">
+      <!-- <div class="d-flex pt-3 pb-5"> -->
+
+      <v-row wrap justify="center" class="mt-13 pb-8 text-left">
+        <div class="text-left ma-3">
           <h2 class="pb-10 text-h3 font-weight-bold">{{ aboutHeading }}</h2>
           <p>
             {{ aboutText }}
             <NuxtLink to="/about">Go to about page></NuxtLink>
           </p>
         </div>
-        <div>
-          <v-img
-            max-width="200"
-            class="mr-4 ml-6"
-            :src="aboutImage"
-            :alt="aboutImageAlt"
-          ></v-img>
-        </div>
-      </div>
+
+        <v-img
+          max-width="200"
+          class="ma-3"
+          :src="aboutImage"
+          :alt="aboutImageAlt"
+        ></v-img>
+        <!-- </div> -->
+      </v-row>
 
       <v-divider class="my-10"></v-divider>
 

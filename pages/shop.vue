@@ -1,6 +1,6 @@
 <template>
   <v-container class="pt-16">
-    <h1 class="pt-16 text-h2 font-weight-black">{{ heading }}</h1>
+    <h1 class="text-center pt-16 text-h2 font-weight-black">{{ heading }}</h1>
 
     <v-divider class="mt-4"></v-divider>
 
@@ -9,7 +9,7 @@
         <NuxtLink :to="pen.path" class="text-decoration-none">
           <v-card-title>{{ pen.title }}</v-card-title>
           <v-card-subtitle>{{ pen.subtitle }}</v-card-subtitle>
-          <v-img max-height="300" max-width="350" :src="pen.thumbnail"></v-img>
+          <v-img max-height="415" max-width="315" :src="pen.thumbnail"></v-img>
         </NuxtLink>
       </v-card>
     </v-row>
