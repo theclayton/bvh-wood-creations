@@ -2,6 +2,8 @@
 
 Includes Netlify CMS backend content management for editing basic text fields and images.
 
+View live demo: https://bvh-wood-creations.netlify.app/
+
 ### Details
 
 Fav Color
